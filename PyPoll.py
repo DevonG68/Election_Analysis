@@ -15,11 +15,7 @@ csvpath = os.path.join('Resources', 'election_results.csv')
 with open(csvpath) as election_data:
  #as election_data:
     lines = election_data.read()
-    #print(lines)
-    #print(type(lines))
-    #print(election_data)
-#Close the file
-#election_data.close()
+    
 
  #Create a filename variable to a direct or indirect path to the file
 file_to_save = os.path.join("analysis", "election_analysis.txt")  
@@ -40,6 +36,18 @@ file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 #Close the file
 #outfile.close()
+#Initialize a total vote counter.
+total_votes = 0
+
+#Candidates options and candidate votes
+candidate_options = []
+candidate_votes = {}
+
+#declare a variable holding empty string value for winning candidate and winning count tracker
+# selected from candidate_options
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
 
 #To do: read and analyze the data here.
 #Read the file object with the reader function and open election results
@@ -88,15 +96,9 @@ with open(csvpath) as election_data:
     #calculate percentage of votes
         vote_percentage = float(votes) / float(total_votes) * 100
     #print the candidate name and percentage of votes
-print(f'{candidate_name}: received {vote_percentage}% of the vote.')
+# print(f"{candidate_name}: received {vote_percentage}% of the vote.")
 # To do: print out each candidate's name, vote count, percent of votes to terminal
-print(f'{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n')
-
-#declare a variable holding empty string value for winning candidate and winning count tracker
-# selected from candidate_options
-winning_candidate = ""
-winning_count = 0
-winning_percentage = 0
+print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
 #determine winning vote count and candidate
 #determine if the votes are greater than the winning count
