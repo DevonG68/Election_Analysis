@@ -1,3 +1,11 @@
-Hello World, Arapahoe
-Denver
-Jefferson
+
+Election Results
+-------------------------
+Total Votes: 369,711
+-------------------------
+Raymon Anthony Doane: 0.0% (1)
+-------------------------
+Winner: Raymon Anthony Doane
+Winning Vote Count: 1
+Winning Percentage: 0.0%
+-------------------------
