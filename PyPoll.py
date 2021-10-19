@@ -60,6 +60,10 @@ with open(csvpath) as election_data:
         candidate_name = row[2]
         county_name = row[1]
 
+counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
+for county, voters in counties_dict.items():
+    print(county, voters)
+
 #file_reader.close()
 #declare a new list and add candidate name to the candidate list
         #candidate_options.append(candidate_name)
